@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+	prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.SampleController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Close" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Delete" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<AnchorPane BorderPane.alignment="CENTER">
+			<children>
+				<VBox prefHeight="455.0" prefWidth="320.0"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<Label text="Rode, App 1">
+							<padding>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</padding>
+						</Label>
+						<Separator prefWidth="200.0" />
+						<GridPane prefHeight="267.0" prefWidth="343.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0"
+									vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0"
+									vgrow="SOMETIMES" />
+							</rowConstraints>
+							<VBox.margin>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</VBox.margin>
+							<children>
+								<TextField fx:id="pierwszePoleTekstowe" promptText="Wpisz tekst"
+									GridPane.columnIndex="1" />
+								<TextField fx:id="drugiePoleTekstowe" promptText="Wpisz tekst"
+									GridPane.columnIndex="1" GridPane.rowIndex="1" />
+								<Label text="Pierwsze pole tekstowe">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Label>
+								<Label text="Drugie pole tekstowe" GridPane.rowIndex="1">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Label>
+							</children>
+							<padding>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</padding>
+						</GridPane>
+						<Separator prefWidth="200.0" />
+						<Label fx:id="sklejonaWartosc" text="Sklejona wartość z obu pól tekstowych">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+				</VBox>
+			</children>
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</padding>
+			<BorderPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</BorderPane.margin>
+		</AnchorPane>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" BorderPane.alignment="CENTER">
+			<children>
+				<Button mnemonicParsing="false" onAction="#sklej" prefHeight="75.0"
+					prefWidth="100.0" text="Sklej">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<HBox.margin>
+						<Insets bottom="21.0" left="11.0" right="11.0" top="11.0" />
+					</HBox.margin>
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Button>
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>

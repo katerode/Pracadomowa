@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="480.0" prefWidth="320.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.SampleController">
+	<top>
+		<VBox spacing="11.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar>
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Close" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Edit">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Delete" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+				<Label text="Rode App 2">
+					<VBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</VBox.margin>
+					<padding>
+						<Insets left="5.0" right="5.0" />
+					</padding>
+				</Label>
+				<Separator prefWidth="200.0">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+					<padding>
+						<Insets left="5.0" right="5.0" />
+					</padding>
+				</Separator>
+				<GridPane prefHeight="200.0" prefWidth="320.0">
+					<columnConstraints>
+						<ColumnConstraints halignment="LEFT" hgrow="SOMETIMES"
+							minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<RadioButton fx:id="rb1" mnemonicParsing="false"
+							text="Hola, wędrowcze! Zatrzymaj się, gdy cię prosi starzec…">
+							<GridPane.margin>
+								<Insets left="7.0" />
+							</GridPane.margin>
+						</RadioButton>
+						<RadioButton fx:id="rb2" mnemonicParsing="false"
+							text="Przed wyruszeniem w drogę należy zebrać drużynę."
+							GridPane.rowIndex="1">
+							<GridPane.margin>
+								<Insets left="7.0" />
+							</GridPane.margin>
+						</RadioButton>
+						<RadioButton fx:id="rb3" mnemonicParsing="false"
+							text="Nieee, panie. Nigdy tu nie było szczurów!"
+							GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets left="7.0" />
+							</GridPane.margin>
+						</RadioButton>
+					</children>
+				</GridPane>
+				<Separator prefWidth="200.0">
+					<padding>
+						<Insets left="5.0" right="5.0" />
+					</padding>
+				</Separator>
+				<TextField fx:id="textField">
+					<VBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</VBox.margin>
+				</TextField>
+			</children>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+		</VBox>
+	</top>
+	<bottom>
+		<HBox alignment="CENTER" BorderPane.alignment="CENTER">
+			<children>
+				<Button mnemonicParsing="false" onAction="#ustaw" text="Ustaw">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</padding>
+		</HBox>
+	</bottom>
+</BorderPane>
